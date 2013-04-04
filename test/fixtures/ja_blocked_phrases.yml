@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  phrase: MyText
+  ja_blocked_root: 
+
+two:
+  phrase: MyText
+  ja_blocked_root: 

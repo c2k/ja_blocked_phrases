@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Phrase:</b>
+  <%= @ja_blocked_phrase.phrase %>
+</p>
+
+<p>
+  <b>Ja blocked root:</b>
+  <%= @ja_blocked_phrase.ja_blocked_root %>
+</p>
+
+
+<%= link_to 'Edit', edit_ja_blocked_phrase_path(@ja_blocked_phrase) %> |
+<%= link_to 'Back', ja_blocked_phrases_path %>

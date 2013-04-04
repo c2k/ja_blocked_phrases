@@ -1,0 +1,25 @@
+<%= form_for(@ja_blocked_phrase) do |f| %>
+  <% if @ja_blocked_phrase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ja_blocked_phrase.errors.count, "error") %> prohibited this ja_blocked_phrase from being saved:</h2>
+
+      <ul>
+      <% @ja_blocked_phrase.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :phrase %><br />
+    <%= f.text_area :phrase %>
+  </div>
+  <div class="field">
+    <%= f.label :ja_blocked_root %><br />
+    <%= f.text_field :ja_blocked_root %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<%= form_for(@ja_blocked_root) do |f| %>
+  <% if @ja_blocked_root.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ja_blocked_root.errors.count, "error") %> prohibited this ja_blocked_root from being saved:</h2>
+
+      <ul>
+      <% @ja_blocked_root.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :root %><br />
+    <%= f.text_field :root %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

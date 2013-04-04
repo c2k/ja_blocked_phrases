@@ -1,0 +1,29 @@
+<h1>Listing ja_blocked_roots</h1>
+
+<table>
+  <tr>
+    <th>Root</th>
+    <th>Phrases</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ja_blocked_roots.each do |ja_blocked_root| %>
+  <tr>
+    <td><%= ja_blocked_root.root %></td>
+    <td>
+      <% ja_blocked_root.ja_blocked_phrases.each do |ja_blocked_phrase| %>
+        <%= ja_blocked_phrase.phrase %><br />
+      <% end %>
+    </td>
+    <td><%= link_to 'Show', ja_blocked_root %></td>
+    <td><%= link_to 'Edit', edit_ja_blocked_root_path(ja_blocked_root) %></td>
+    <td><%= link_to 'Destroy', ja_blocked_root, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ja blocked root', new_ja_blocked_root_path %>
