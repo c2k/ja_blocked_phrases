@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/c2k/mojinizer.git
-  revision: 57eee986d2ee97d91189955611351c5781a30175
+  remote: git://github.com/ikayzo/mojinizer.git
+  revision: 98787253fa301640b5a19f8a4e08f24f1d7269ae
   branch: master
   specs:
     mojinizer (0.1.0)

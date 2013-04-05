@@ -12,5 +12,5 @@ group :assets do
 end
 
 gem 'jquery-rails', '2.2.1'
-gem 'mojinizer', :github => 'c2k/mojinizer', :branch => 'master'
+gem 'mojinizer', :github => 'ikayzo/mojinizer', :branch => 'master'
 gem 'unicode_japanese', '0.2'
