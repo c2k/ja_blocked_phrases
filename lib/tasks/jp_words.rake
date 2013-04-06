@@ -20,9 +20,13 @@ namespace :ja do
     @roots = []
     @skipped_roots = []
     @furigana_needed = []
+    @skipped_section = 0
 
     csv.each do |row|
-      next if row.first.include? '----------'
+      if row.first.include? '----------'
+        @skipped_section += 1
+        next
+      end
       blocked_root = JaBlockedRoot.new(:root => row.first)
       if blocked_root.save
         puts "Added blocked root: #{row.first}"
@@ -50,7 +54,7 @@ namespace :ja do
     end
 
     puts "---------- TOTALS ----------"
-    puts "#{csv.count} rows in CSV file"
+    puts "#{csv.count - @skipped_section} rows in CSV file"
     puts "Created #{JaBlockedRoot.count} Japanese Blocked Roots"
     puts "Created #{JaBlockedPhrase.count} Japanese Blocked Phrases"
     puts "Furigana needed #{@furigana_needed.count}"
